@@ -1,0 +1,13 @@
+/*function openMobileMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.style.display = "flex";
+}
+
+function closeMobileMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.style.display = "none";
+}*/
+
+function toggleMobileMenu() {
+    document.body.classList.toggle("menu-open");
+}
