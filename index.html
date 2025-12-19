@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./script.js" defer></script>
+
+    <!--Nunito-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -13,8 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
-    
 </head>
 <body>
     <div class="nav">
@@ -24,26 +25,26 @@
                 <li class="hideOnMobile"><a href="#">About</a></li>
                 <li class="hideOnMobile"><a href="#">Resources</a></li>
                 <li class="hideOnMobile"><a href="#">Broadcasts</a></li>
-                <li class="link-tag hideOnMobile"><a href="#">Sermons</a><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="26px" fill="#853748"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                <li class="link-tag hideOnMobile">Sermons<svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="currentColor"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </li>
-                <li class="link-tag hideOnMobile"><a href="#">Features and Tools</a><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="26px" fill="#853748"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                <li class="link-tag hideOnMobile">Features and Tools<svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="currentColor"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </li>
                 <li class="hideOnMobile"><a href="#">Store</a></li>
                 <li class="hideOnMobile"><a href="#">Partner & Support</a></li>
                 <li class="hideOnMobile"><input type="text" placeholder="search"></li>
-                <li class="hideOnMobile"><button>DONATE<svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></a></button></li>
-                <li class="menu-button"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#571e2a"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+                <li class="hideOnMobile"><button>DONATE<svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="currentColor"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></button></li>
+                <li class="hamburger-button" onclick=toggleMobileMenu()><svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#40403d"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg><svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#40403d"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </ul>
         </div>
-        <div class="mobile-bar">
+        <div class="mobile-menu">
             <ul>
-                <li class="close-button"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <!--<li class="close-button" onclick=toggleMobileMenu()><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#40403b"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>-->
                 <li><a href="#">About</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Broadcasts</a></li>
-                <li class="link-tag">Sermons<a href="#"></a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                <li class="link-tag">Sermons<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </li>
-                <li class="link-tag">Features and Tools<a href="#"></a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                <li class="link-tag">Features and Tools<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </li>
                 <li><a href="#">Store</a></li>
                 <li><a href="#">Partner & Support</a></li>
@@ -54,7 +55,7 @@
     </div>
     <section class="hero">
         <div class="courses">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="auto" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg></a>Back to courses
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg></a>Back to courses
         </div>
         <h1>Pray the Bible</h1>
         <h3><span>
