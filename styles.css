@@ -76,6 +76,18 @@ body {
   margin: 0;
 }
 
+body.menu-open .mobile-menu {
+  display: flex;
+}
+
+body.menu-open .hamburger-button .icon-close {
+  display: flex;
+}
+
+body .hamburger-button .icon-hamburger, .icon-close {
+  display: none;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -89,26 +101,8 @@ body {
     background-color: white;
 }
 
-.nav a {
-  text-decoration: none;
-  display: inline-block;
-  color: var(--gray-700);
-  font-size: 1.6rem;
-  border-bottom: .2rem solid transparent;
-  transition: background-color 0.3s ease,
-              border-color 0.4s ease,
-              padding 0.1s ease;
-}
-
-.nav a:hover {
-  border-bottom-color: var(--ter-400);
-  padding: 0 .1rem;
-  color: var(--ter-400);
-  cursor: pointer;
-}
-
-.nav .link-tag a {
-  border-bottom: none;
+.link-tag {
+  display: flex;
 }
 
 .link-bar {
@@ -124,6 +118,24 @@ body {
     list-style: none;
 }
 
+.link-bar a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--gray-700);
+  font-size: 1.6rem;
+  border-bottom: .2rem solid transparent;
+  transition: background-color 0.3s ease,
+              border-color 0.4s ease,
+              padding 0.1s ease;
+}
+
+.link-bar a:hover {
+  border-bottom-color: var(--ter-400);
+  padding: 0 .1rem;
+  color: var(--ter-400);
+  cursor: pointer;
+}
+
 ul > li:first-child {
   margin-right: auto;
 }
@@ -137,18 +149,35 @@ ul > li:nth-child(10) {
   height: auto;
 }
 
-.link-tag, .courses {
-  display: flex;
-  align-items: center;
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 12vh;
+  right: 0;
+  width: 100%;
+  height:auto;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.801);
+  backdrop-filter: blur(10px)
 }
 
-.mobile-bar {
-  display: none;
+.mobile-menu li, .mobile-menu a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--gray-700);
+}
+
+.mobile-menu ul > li:first-child {
+  align-self: flex-end;
 }
 
 .hideOnMobile input {
   font-size: 1.6rem;
-  padding: .8rem .8rem;
+  padding: .8rem;
   border-color: var(--gray-400);
   border-radius: .6rem;
 }
@@ -167,10 +196,6 @@ ul > li:nth-child(10) {
 .hideOnMobile button:hover {
   background-color: var(--ter-500);
   color: var(--gray-200);
-}
-
-.menu-button {
-  display: none;
 }
 
 .hero {
@@ -265,6 +290,7 @@ button:hover {
 
 .links-section {
   display: flex;
+  flex-wrap: wrap;
   gap: 6rem;
   padding: 10rem 4.8rem;
   background-color: var(--gray-100);
@@ -290,9 +316,19 @@ button:hover {
 }
 
 @media (max-width: 1100px) {
-  .menu-button {
-    display: block;
+
+  body .hamburger-button .icon-hamburger {
+    display: flex;
   }
+
+  body.menu-open .hamburger-button .icon-hamburger {
+    display: none;
+  }
+
+  body.menu-open .hamburger-button .icon-close {
+    display: flex;
+  }
+
   .hideOnMobile {
     display: none;
   }
